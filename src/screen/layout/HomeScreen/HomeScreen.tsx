@@ -13,8 +13,8 @@ const HomeScreen = () => {
   };
 
   return (
-    <View>
-      <Text>HomeScreen</Text>
+    <View style={{flex:1,justifyContent:"center" ,alignSelf:"center"}}>
+      <Text> Welcome to HomeScreen</Text>
       <AppButton text={'Logout'} onSubmit={handleLogout} />
     </View>
   );
