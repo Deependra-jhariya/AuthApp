@@ -49,4 +49,9 @@ export const loginStyle = StyleSheet.create({
     fontFamily: AppFontFamily.Regular,
     fontSize: 15,
   },
+  btnIcon: {
+    width: 28,
+    height: 28,
+    resizeMode: 'contain',
+  },
 });

@@ -1,12 +1,13 @@
 import {
   Alert,
+  Image,
   KeyboardAvoidingView,
   Platform,
   TouchableOpacity,
   View,
 } from 'react-native';
 import React, { useState } from 'react';
-import { AppFontFamily } from '../../../themes';
+import { AppFontFamily, AppImages } from '../../../themes';
 import {
   ActivityLoader,
   AppButton,
@@ -112,6 +113,20 @@ const LoginScreen = () => {
             style={loginStyle.googleLoginBtn}
             ButtonTextStyle={loginStyle.googleLoginText}
             onSubmit={handleGoogleLogin}
+            isButtonIcon={
+              <Image source={AppImages.google} style={loginStyle.btnIcon} />
+            }
+          />
+        </View>
+        <View style={loginStyle.googleLoginView}>
+          <AppButton
+            text={'Login with Facebook'}
+            style={loginStyle.googleLoginBtn}
+            ButtonTextStyle={loginStyle.googleLoginText}
+            onSubmit={handleGoogleLogin}
+            isButtonIcon={
+              <Image source={AppImages.google} style={loginStyle.btnIcon} />
+            }
           />
         </View>
       </KeyboardAvoidingView>
