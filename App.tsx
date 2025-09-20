@@ -1,17 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import AllStack from './src/navigation/AllStack/AllStack'
-import { Provider } from 'react-redux'
-import { store } from './src/redux/store'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import AllStack from './src/navigation/AllStack/AllStack';
+import { Provider } from 'react-redux';
+import { store } from './src/redux/store';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 const App = () => {
+
   return (
     <Provider store={store}>
-    <AllStack/>
+      <AllStack />
     </Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

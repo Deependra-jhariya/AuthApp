@@ -1,4 +1,4 @@
-package com.authapp
+package com.authapplogin
 
 import android.app.Application
 import com.facebook.react.PackageList

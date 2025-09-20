@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { AppButton } from '../../../components/atoms';
+import { AppButton, AppText } from '../../../components/atoms';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../../redux/store';
 import { logoutUser } from '../../../redux/feature/Auth/AuthApi';
+import { AppColors } from '../../../themes';
 
 const HomeScreen = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -13,9 +14,13 @@ const HomeScreen = () => {
   };
 
   return (
-    <View style={{flex:1,justifyContent:"center" ,alignSelf:"center"}}>
-      <Text> Welcome to HomeScreen</Text>
-      <AppButton text={'Logout'} onSubmit={handleLogout} />
+    <View style={{ flex: 1, justifyContent: 'center', alignSelf: 'center' }}>
+      <AppText text={'Welcome To HomeScreen'} />
+      <AppButton
+        text={'Logout'}
+        onSubmit={handleLogout}
+        style={{ backgroundColor: AppColors.lightGreen }}
+      />
     </View>
   );
 };

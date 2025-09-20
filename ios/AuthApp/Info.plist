@@ -25,6 +25,15 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
+
+	<array>
+	<string>Poppins-Bold.ttf</string>
+	<string>Poppins-Light.ttf</string>
+	<string>Poppins-Medium.ttf</string>
+	<string>Poppins-Regular.ttf</string>
+	<string>Poppins-SemiBold.ttf</string>
+	</array>
+
 	<dict>
 	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
 		<key>NSAllowsArbitraryLoads</key>

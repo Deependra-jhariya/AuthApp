@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { AuthPayload, AuthTypes } from './AuthTypes';
-import { loginUser, logoutUser, signupUser } from './AuthApi';
+import { googleLoginUser, loginUser, logoutUser, signupUser } from './AuthApi';
 
 interface authState {
   user: any;
@@ -24,7 +24,7 @@ const userSlice = createSlice({
     setLoading: (state, action) => {
       state.loading = action.payload;
     },
-    logout: (state) => {
+    logout: state => {
       state.user = null;
       state.error = null;
       state.loading = false;
@@ -64,6 +64,20 @@ const userSlice = createSlice({
       // Logout
       .addCase(logoutUser.fulfilled, state => {
         state.user = null;
+      })
+
+      // Google Login
+      .addCase(googleLoginUser.pending, state => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(googleLoginUser.fulfilled, (state, action) => {
+        state.loading = false;
+        state.user = action.payload;
+      })
+      .addCase(googleLoginUser.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload as string;
       });
   },
 });

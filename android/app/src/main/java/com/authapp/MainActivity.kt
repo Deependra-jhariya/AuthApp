@@ -1,4 +1,4 @@
-package com.authapp
+package com.authapplogin
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

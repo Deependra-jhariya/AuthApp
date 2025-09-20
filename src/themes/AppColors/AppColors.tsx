@@ -13,6 +13,7 @@ export const AppColors = {
   ExtralightGray: '#D9D9D9',
   transparent: '#737373',
   green: '#0DA92A',
+  lightGreen: '#2D8761',
   darkChocolate: '#703400',
   lightYellow: '#FFF1CE',
   ExtralightYellow: '#FFF4D9',

@@ -72,7 +72,7 @@ const AppInput: React.FC<ThemeInputProps> = (props) => {
             onBlur={onBlur}
             textAlignVertical={textAlignVertical}
             multiline={multiline}
-            placeholderTextColor={placeholderColors}
+            placeholderTextColor={placeholderColors || AppColors.black}
             keyboardType={keyboardType}
             secureTextEntry={secureTextEntry}
           />
@@ -97,7 +97,9 @@ const AppInput: React.FC<ThemeInputProps> = (props) => {
 export default AppInput;
 
 const styles = StyleSheet.create({
-  inputContainer: {},
+  inputContainer: {
+    paddingHorizontal:16
+  },
   inputMainView: {
     flexDirection: "row",
     justifyContent: "space-between",

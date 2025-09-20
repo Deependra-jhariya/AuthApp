@@ -53,9 +53,9 @@ const styles = StyleSheet.create({
   buttonView: {
     backgroundColor: AppColors.appColor,
     paddingVertical: 10,
-    paddingHorizontal: 27,
+    paddingHorizontal: 16,
     borderRadius: 9,
-    margin: 10,
+    margin: 16,
   },
   textViewStyle: {
     flexDirection: 'row',
