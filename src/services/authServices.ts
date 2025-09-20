@@ -20,7 +20,7 @@ export const listenToAuthChanges = (callback: (user: any) => void) => {
 // Google Login
 
 GoogleSignin.configure({
-  webClientId: '36190950400-c9soikbj332bt909pn4els2he7h4vf1k.apps.googleusercontent.com', // from Firebase project settings
+  webClientId: '36190950400-c9soikbj332bt909pn4els2he7h4vf1k.apps.googleusercontent.com', // add your own webClientId from Firebase project settings
 });
 
 export const googleLogin = async (): Promise<FirebaseAuthTypes.User> => {
